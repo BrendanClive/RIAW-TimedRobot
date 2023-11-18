@@ -45,6 +45,7 @@ public class Robot extends TimedRobot {
     m_chooser.setDefaultOption("Default Auto", kDefaultAuto);
     m_chooser.addOption("My Auto", kCustomAuto);
     SmartDashboard.putData("Auto choices", m_chooser);
+    m_rightDrive.setInverted(true);
   }
 
   /**
@@ -53,9 +54,9 @@ public class Robot extends TimedRobot {
    *
    * <p>This runs after the mode specific periodic functions, but before LiveWindow and
    * SmartDashboard integrated updating.
+   * @return 
    */
-  @Override
-  public void robotPeriodic() {}
+
 
   /**
    * This autonomous (along with the chooser code above) shows how to select between different
@@ -90,11 +91,16 @@ public class Robot extends TimedRobot {
 
   /** This function is called once when teleop is enabled. */
   @Override
-  public void teleopInit() {}
+  public void teleopInit() {
+
+  }
 
   /** This function is called periodically during operator control. */
   @Override
-  public void teleopPeriodic() {}
+  public void teleopPeriodic() {
+     
+    m_robotDrive.tankDrive(m_controller.getLeftY(), m_controller.getRightY());
+  }
 
   /** This function is called once when the robot is disabled. */
   @Override
