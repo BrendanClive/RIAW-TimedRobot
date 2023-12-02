@@ -10,16 +10,39 @@
         "header": {
           "open": true
         }
-      },
-      "window": {
-        "visible": false
       }
     }
   },
   "NTProvider": {
     "types": {
       "/FMSInfo": "FMSInfo",
+      "/LiveWindow/Ungrouped/DifferentialDrive[1]": "DifferentialDrive",
       "/SmartDashboard/Auto choices": "String Chooser"
+    },
+    "windows": {
+      "/FMSInfo": {
+        "window": {
+          "visible": true
+        }
+      },
+      "/SmartDashboard/Auto choices": {
+        "window": {
+          "visible": true
+        }
+      }
+    }
+  },
+  "NetworkTables": {
+    "transitory": {
+      "Shuffleboard": {
+        "open": true
+      },
+      "SmartDashboard": {
+        "Auto choices": {
+          "open": true
+        },
+        "open": true
+      }
     }
   }
 }
